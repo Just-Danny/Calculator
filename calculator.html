@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style></style><script src="Java/calc.js"></script>
+<title>Calculator</title>
+</head>
+<body>
+    <h1>Javascript Calculator</h1>
+
+    <br>
+    <table>
+        <thead colspan ="5">
+            <p id="display"></p> 
+        </thead>
+        <tbody>
+            <tr>
+                <td><button onclick="set(1)">1</button></td>
+                <td><button onclick="set(2)">2</button></td>
+                <td><button onclick="set(3)">3</button></td>
+                <td><button onclick="op(1)">+</button></td>
+                <td><button onclick="op(2)">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="set(4)">4</button></td>
+                <td><button onclick="set(5)">5</button></td>
+                <td><button onclick="set(6)">6</button></td>
+                <td><button onclick="op(3)">X</button></td>
+                <td><button onclick="op(4)">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="set(7)">7</button></td>
+                <td><button onclick="set(8)">8</button></td>
+                <td><button onclick="set(9)">9</button></td>
+                <td colspan="2"><button onclick="equal()">=</button></td>
+            </tr>
+            <tr>
+            <td colspan="3"><button onclick="set(0)">0</button></td>
+            <td colspan="2"><button onclick="clear()">CLR</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
