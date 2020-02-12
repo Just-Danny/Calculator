@@ -1,57 +1,67 @@
 var num1 = 0;//1st number
 var num2 = 0;//2nd number
 var ops = 0;//Operators 1= addition, 2= division, 3= multiplication, 4 = subtraction
-var key = false;
+var key = true;//Flag
 
 //numbers
 function set(x)
 {
-if (key == false)
+if (key == true)//Number1
 {
-    document.getElementById("display").innerHTML += x;
-    num1+=x;
+    
+    num1=document.getElementById("display").innerHTML+=x;
+    console.log("num1:"+num1);
 }
-else 
+if(key == false)//Number2
 {
-    document.getElementById("display").innerHTML
+    
+    num2+=""+x;
+    document.getElementById("display").innerHTML+=x;
+    console.log("num2:"+num2);
 }
 }
 
-
-
-function op(x)
+function op(x)// display type of operation
 {
-    if (key = false )
-    {
-        if (ops == op(1))
+    key = false;
+    if(x==1)
         {
-            document.getElementById("display").innerHTML = num1 + " + "  +num2;
+        document.getElementById("display").innerHTML += " + ";
+        ops=x;
+        
+        }  
+     else if(x==2)
+        {
+        document.getElementById("display").innerHTML = num1 + " / "+num2;
         }
-        else if(ops == op(2))
+    else if(x==3)
         {
-            document.getElementById("display").innerHTML = num1 + " / " +num2; 
+        document.getElementById("display").innerHTML = num1 + " X "+num2;
         }
-        else if(ops == op(3))
+    else if(x==4)
         {
-            document.getElementById("display").innerHTML = num1+ " X " +num2;
-        }
-        else
-        {
-            document.getElementById("display").innerHTML = num1+" - " +num2;
+        document.getElementById("display").innerHTML = num1 +" - "+num2;
         } 
-    }
 }
+
+
 
 //Equal button
 function equal()
 {
-    if (key = false ){
-    document.getElementById("display").innerHTML = num1 += x;
-    }
+    key=true;
+    if (key == true)
+{
+    document.getElementById("display").innerHTML = num1+num2;  
+    console.log(num1+num2);    
 }
-
+    /*else if(key == true)
+    {
+        document.getElementById("display").innerHTML = num1/num2;
+    }*/
+}
 //Clear button
 function erase()
 {
-    document.getElementById("display").innerHTML = " ";
+    document.getElementById("display").innerHTML = "";
 }
