@@ -1,4 +1,4 @@
-var num1 = 0;//1st number
+var num1 = "";//1st number
 var num2 = "";//2nd number
 var ops = 0;//Operators 1= addition, 2= division, 3= multiplication, 4 = subtraction
 var key = true;//Flag
@@ -50,6 +50,8 @@ function op(x)// display type of operation
 function equal()
 {
     key=true;
+    num2 =  parseInt(num2);
+    num1= parseInt(num1);
     if (ops == 1)
     {
     document.getElementById("display").innerHTML = num1+num2;  
